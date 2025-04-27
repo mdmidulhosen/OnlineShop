@@ -4,6 +4,7 @@ import {SvgXml} from 'react-native-svg';
 import {IconCart, IconLocation} from '../assets/icons/Icons';
 import {globalStyles} from '../styles/global';
 import {headerStyle} from './styles/headerStyle';
+import {IS_TABLET} from '../utils/device';
 
 const Header = () => {
   return (
@@ -13,10 +14,10 @@ const Header = () => {
       </View>
       <View style={headerStyle.headerRight}>
         <TouchableOpacity>
-          <SvgXml xml={IconLocation} height={44} width={44} />
+          <SvgXml xml={IconLocation} height={IS_TABLET ? 56 : 44} width={IS_TABLET ? 56 : 44} />
         </TouchableOpacity>
         <TouchableOpacity>
-          <SvgXml xml={IconCart} height={44} width={44} />
+          <SvgXml xml={IconCart} height={IS_TABLET ? 56 : 44} width={IS_TABLET ? 56 : 44} />
         </TouchableOpacity>
       </View>
     </View>

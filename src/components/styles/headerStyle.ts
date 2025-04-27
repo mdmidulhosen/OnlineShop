@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {IS_TABLET} from '../../utils/device';
 
 export const headerStyle = StyleSheet.create({
   container: {
@@ -7,11 +8,13 @@ export const headerStyle = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    backgroundColor: '#ffffff',
+    width: '100%',
   },
   headerRight: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
+    gap: IS_TABLET ? 16 : 8,
   },
 });

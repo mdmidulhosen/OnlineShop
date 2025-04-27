@@ -19,6 +19,7 @@ import Search from '../screens/search/Search';
 import Orders from '../screens/orders/Orders';
 import Account from '../screens/account/Account';
 import {styles} from './styles';
+import {IS_TABLET} from '../utils/device';
 
 const BottomRoutes = () => {
   const Tab = createBottomTabNavigator();
@@ -30,6 +31,7 @@ const BottomRoutes = () => {
         tabBarInactiveTintColor: 'inactive',
         tabBarLabelStyle: styles.label,
         tabBarStyle: styles.tabBarBody,
+        tabBarLabelPosition: 'below-icon',
       }}>
       <Tab.Screen
         name="Home"
@@ -40,8 +42,8 @@ const BottomRoutes = () => {
           tabBarIcon: ({color}) => (
             <SvgXml
               xml={color === 'inactive' ? IconHome : IconActiveHome}
-              height={32}
-              width={32}
+              height={IS_TABLET ? 38 : 32}
+              width={IS_TABLET ? 38 : 32}
             />
           ),
         }}
@@ -55,8 +57,8 @@ const BottomRoutes = () => {
           tabBarIcon: ({color}) => (
             <SvgXml
               xml={color === 'inactive' ? IconRewards : IconActiveRewards}
-              height={32}
-              width={32}
+              height={IS_TABLET ? 38 : 32}
+              width={IS_TABLET ? 38 : 32}
             />
           ),
         }}
@@ -71,8 +73,8 @@ const BottomRoutes = () => {
           tabBarIcon: ({color}) => (
             <SvgXml
               xml={color === 'inactive' ? IconSearch : IconActiveSearch}
-              height={32}
-              width={32}
+              height={IS_TABLET ? 38 : 32}
+              width={IS_TABLET ? 38 : 32}
             />
           ),
         }}
@@ -87,8 +89,8 @@ const BottomRoutes = () => {
           tabBarIcon: ({color}) => (
             <SvgXml
               xml={color === 'inactive' ? IconOrders : IconActiveOrders}
-              height={32}
-              width={32}
+              height={IS_TABLET ? 38 : 32}
+              width={IS_TABLET ? 38 : 32}
             />
           ),
         }}
@@ -102,8 +104,8 @@ const BottomRoutes = () => {
           tabBarIcon: ({color}) => (
             <SvgXml
               xml={color === 'inactive' ? IconAccount : IconActiveAccount}
-              height={24}
-              width={24}
+              height={IS_TABLET ? 30 : 24}
+              width={IS_TABLET ? 30 : 24}
             />
           ),
         }}

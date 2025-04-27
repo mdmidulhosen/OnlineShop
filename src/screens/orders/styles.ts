@@ -1,11 +1,13 @@
 import {StyleSheet} from 'react-native';
+import { IS_TABLET } from '../../utils/device';
 
 export const styles = StyleSheet.create({
   title: {
     color: '#667085',
-    fontSize: 14,
+    fontSize: IS_TABLET ? 24 : 18,
+    fontFamily: 'Montserrat-Medium',
     textAlign: 'center',
-    marginTop: 10,
+    marginTop: IS_TABLET ? 20 : 10,
   },
   container: {
     backgroundColor: '#ffffff',
@@ -15,7 +17,6 @@ export const styles = StyleSheet.create({
   body: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#ffffff',
     flex: 1,
   },
 });

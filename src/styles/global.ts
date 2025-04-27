@@ -1,13 +1,10 @@
 import {StyleSheet} from 'react-native';
+import {IS_TABLET} from '../utils/device';
 
 export const globalStyles = StyleSheet.create({
-  title: {
-    color: '#667085',
-    fontSize: 14,
-  },
   primaryTitle: {
     color: '#43c462',
-    fontSize: 36,
+    fontSize: IS_TABLET ? 44 : 36,
     fontFamily: 'Montserrat-SemiBold',
   },
   container: {
@@ -18,7 +15,7 @@ export const globalStyles = StyleSheet.create({
     paddingHorizontal: '4%',
   },
   headerTitle: {
-    fontSize: 36,
+    fontSize: IS_TABLET ? 44 : 36,
     fontFamily: 'Montserrat-SemiBold',
     color: '#000000',
   },

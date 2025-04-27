@@ -1,16 +1,17 @@
 import {StyleSheet} from 'react-native';
+import {IS_TABLET} from '../utils/device';
 
 export const styles = StyleSheet.create({
   label: {
-    fontSize: 12,
+    fontSize: IS_TABLET ? 16 : 12,
     fontFamily: 'Montserrat-Regular',
-    marginTop: 6,
+    marginTop: IS_TABLET ? 8 : 6,
   },
   tabBarBody: {
-    paddingTop: 6,
+    paddingTop: IS_TABLET ? 10 : 6,
     borderTopColor: '#d0d5dd',
     backgroundColor: '#ffffff',
     borderTopWidth: 0.4,
-    height: 70,
+    height: IS_TABLET ? 75 : 70,
   },
 });
